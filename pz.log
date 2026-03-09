@@ -1,0 +1,10 @@
+INFO:root:Подключение к базе данных MySQL успешно установлено
+INFO:root:Подключение к базе данных MySQL успешно установлено
+INFO:root:Query: CREATE TABLE IF NOT EXISTS students (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100), age INT, grade VARCHAR(10)) | Params: ()
+INFO:root:Query: INSERT INTO students (name, age, grade) VALUES (%s, %s, %s) | Params: ['Анна', 20, 'A']
+INFO:root:Query: INSERT INTO students (name, age, grade) VALUES (%s, %s, %s) | Params: [['Иван', 21, 'B'], ['Мария', 19, 'A'], ['Петр', 22, 'C']]
+INFO:root:Query: SELECT * FROM students | Params: []
+INFO:root:Query: SELECT * FROM students WHERE grade = %s | Params: ['A']
+INFO:root:Query: SELECT * FROM students WHERE id = %s LIMIT 1 | Params: [5]
+INFO:root:Query: UPDATE students SET grade = %s WHERE id = %s | Params: ['A+', 5]
+INFO:root:Соединение закрыто
